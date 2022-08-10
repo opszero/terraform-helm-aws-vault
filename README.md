@@ -1,6 +1,4 @@
-## Requirements
-
-No requirements.
+<!-- BEGIN_TF_DOCS -->
 
 ## Providers
 
@@ -9,24 +7,6 @@ No requirements.
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 | <a name="provider_helm"></a> [helm](#provider\_helm) | n/a |
 | <a name="provider_null"></a> [null](#provider\_null) | n/a |
-
-## Modules
-
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_oidc_provider_data"></a> [oidc\_provider\_data](#module\_oidc\_provider\_data) | reegnz/oidc-provider-data/aws | 0.0.2 |
-
-## Resources
-
-| Name | Type |
-|------|------|
-| [aws_iam_role.vault_s3_kms_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
-| [aws_iam_role_policy_attachment.s3_kms](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
-| [helm_release.vault](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
-| [null_resource.create_vault_yml](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
-| [aws_eks_cluster.cluster](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster) | data source |
-| [aws_iam_policy_document.assume_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -40,7 +20,17 @@ No requirements.
 | <a name="input_vault_backend_bucket_region"></a> [vault\_backend\_bucket\_region](#input\_vault\_backend\_bucket\_region) | The region of the s3 bucket | `string` | `"us-east-1"` | no |
 | <a name="input_vault_s3_kms_role_name"></a> [vault\_s3\_kms\_role\_name](#input\_vault\_s3\_kms\_role\_name) | Role used by the Vault as S3 backend | `string` | `"vault_s3_kms_role"` | no |
 | <a name="input_vault_yml_file"></a> [vault\_yml\_file](#input\_vault\_yml\_file) | n/a | `any` | `null` | no |
+## Resources
 
+| Name | Type |
+|------|------|
+| [aws_iam_role.vault_s3_kms_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy_attachment.s3_kms](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
+| [helm_release.vault](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
+| [null_resource.create_vault_yml](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
+| [aws_eks_cluster.cluster](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster) | data source |
+| [aws_iam_policy_document.assume_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 ## Outputs
 
 No outputs.
+<!-- END_TF_DOCS -->
