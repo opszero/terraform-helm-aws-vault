@@ -17,7 +17,7 @@ data "aws_eks_cluster" "cluster" {
 # This module is for generating the OpenID Connect provider ARN one would get given an issuer url.
 module "oidc_provider_data" {
   source     = "reegnz/oidc-provider-data/aws"
-  version    = "0.0.2"
+  version    = "0.0.4"
   issuer_url = data.aws_eks_cluster.cluster.identity[0].oidc[0].issuer
 }
 
