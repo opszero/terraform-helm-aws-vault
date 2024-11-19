@@ -14,7 +14,7 @@
 | <a name="input_eks_cluster_name"></a> [eks\_cluster\_name](#input\_eks\_cluster\_name) | The name of EKS cluster to get OIDC ARN and Name | `any` | n/a | yes |
 | <a name="input_force_detach_policies"></a> [force\_detach\_policies](#input\_force\_detach\_policies) | Flag to force detachment of policies attached to the IAM role. | `string` | `false` | no |
 | <a name="input_iam_role_path"></a> [iam\_role\_path](#input\_iam\_role\_path) | Path under which to create IAM role. | `string` | `"/"` | no |
-| <a name="input_s3_kms_policy_arns"></a> [s3\_kms\_policy\_arns](#input\_s3\_kms\_policy\_arns) | List of IAM policies to attach IAM role | `list` | <pre>[<br>  "arn:aws:iam::aws:policy/AmazonS3FullAccess",<br>  "arn:aws:iam::aws:policy/AWSKeyManagementServicePowerUser"<br>]</pre> | no |
+| <a name="input_s3_kms_policy_arns"></a> [s3\_kms\_policy\_arns](#input\_s3\_kms\_policy\_arns) | List of IAM policies to attach IAM role | `list` | <pre>[<br/>  "arn:aws:iam::aws:policy/AmazonS3FullAccess",<br/>  "arn:aws:iam::aws:policy/AWSKeyManagementServicePowerUser"<br/>]</pre> | no |
 | <a name="input_vault_backend_bucket_kms_key"></a> [vault\_backend\_bucket\_kms\_key](#input\_vault\_backend\_bucket\_kms\_key) | The ID of the KMS key | `string` | `"alias/aws/s3"` | no |
 | <a name="input_vault_backend_bucket_name"></a> [vault\_backend\_bucket\_name](#input\_vault\_backend\_bucket\_name) | The name of s3 bucket for backend | `any` | n/a | yes |
 | <a name="input_vault_backend_bucket_region"></a> [vault\_backend\_bucket\_region](#input\_vault\_backend\_bucket\_region) | The region of the s3 bucket | `string` | `"us-east-1"` | no |
